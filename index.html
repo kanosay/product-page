@@ -4,12 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="css/style.css">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
   <title>E-commerce product page</title>
 </head>
 <body>
-
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <img src="images/icon-menu.svg" alt="" class="header__burger">
+        <img src="images/logo.svg" alt="Logo" class="header__logo">
+        <nav class="header__nav">
+          <ul class="lists">
+            <li><a href="">Collections</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header__profile">
+          <img src="images/icon-cart.svg" alt="Cart" class="header__goods">
+          <img src="images/image-avatar.png" alt="User" class="header__user">
+        </div>
+        <div class="header__cart">
+          <div class="cart__inner">
+            <h2 class="cart__title">Cart</h2>
+          </div>
+          <h3 class="cart__empty">Your cart is empty</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="main__inner">
+        <div class="main__img">
+          <img src="images/image-product-1.jpg" alt="" class="shoe">
+          <ul class="list__shoes">
+            <li><img id="show-1" class="item__shoe active__show" src="images/image-product-1-thumbnail.jpg" alt=""></li>
+            <li><img id="show-2" class="item__shoe" src="images/image-product-2-thumbnail.jpg" alt=""></li>
+            <li><img id="show-3" class="item__shoe" src="images/image-product-3-thumbnail.jpg" alt=""></li>
+            <li><img id="show-4" class="item__shoe" src="images/image-product-4-thumbnail.jpg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
   
-  
+  <script src="main.js"></script>
 </body>
 </html>
 

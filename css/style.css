@@ -1,1 +1,224 @@
 @import url(reset.css);
+
+body {
+    font-family: "Kumbh Sans", serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* header */
+
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding-top: 30px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.header__burger {
+    padding-right: 20px;
+    display: none;
+}
+
+.lists {
+    display: flex;
+    gap: 0 30px;
+    padding-left: 50px;
+}
+
+.lists a {
+    color: hsl(219, 9%, 45%);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding-bottom: 55px;
+    position: relative;
+}
+
+.lists a:hover {
+    color: hsl(220, 13%, 13%);
+}
+
+.lists a:hover::after {
+    transform: translateY(0px);
+}
+
+.lists a::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.header__profile {
+    margin-left: auto;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+}
+
+.header__user,
+.header__goods {
+    cursor: pointer;
+}
+
+.header__profile .header__user {
+    max-width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.header__user:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.header__cart {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    width: 380px;
+    border-radius: 5px;
+    right: 280px;
+    top: 90px;
+    box-shadow: 0px 0px 20px hsla(220deg, 14%, 75%, 0.5);
+    min-height: 300px;
+    flex-direction: column;
+}
+
+.cart__inner {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+.cart__title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 30px 20px;
+}
+
+.cart__empty {
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1; 
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+}
+
+/* main */
+
+.main {
+    margin-top: 100px;
+    padding-bottom: 40px;
+}
+
+.main__img {
+    max-width: 500px;
+}
+
+.shoe {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.list__shoes {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.list__shoes img {
+    width: 95px;
+    border-radius: 20px;
+    height: 95px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.active__show {
+    border: 2px solid hsl(26, 100%, 55%);
+    opacity: 0.7;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .header__inner {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border: none;
+    }
+
+    .header__burger {
+        display: block;
+        z-index: 5;
+        position: relative;
+    }
+
+    .lists {
+        display: none;
+    }
+
+    .lists.active__menu {
+        display: flex;
+        position: fixed;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 160px 0px 0px hsl(0deg 0% 0% / 43%);
+        width: 70%;
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        justify-content: center;
+        z-index: 2;
+        padding-left: 20px;
+        gap: 30px 0;
+        font-weight: 700;
+    }
+
+    .lists a {
+        color: hsl(220, 13%, 13%);
+        font-size: 22px;
+    }
+
+    .lists a::after {
+        content: none;
+    }
+
+    .header__profile {
+        gap: 0 30px;
+    }
+
+    .header__profile .header__user {
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .header__cart {
+        border-radius: 5px;
+        margin: 0 20px;
+        right: 0;
+        width: 100%;
+        width: auto;
+        left: 0;
+    }
+}
