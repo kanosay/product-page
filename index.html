@@ -27,12 +27,15 @@
         <div class="header__profile">
           <img src="images/icon-cart.svg" alt="Cart" class="header__goods">
           <img src="images/image-avatar.png" alt="User" class="header__user">
+          <span class="cart__notices"></span>
         </div>
         <div class="header__cart">
           <div class="cart__inner">
             <h2 class="cart__title">Cart</h2>
           </div>
-          <h3 class="cart__empty">Your cart is empty</h3>
+          <div class="cart__item">
+            <h3 class="cart__empty">Your cart is empty</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -40,14 +43,48 @@
   <main class="main">
     <div class="container">
       <div class="main__inner">
-        <div class="main__img">
-          <img src="images/image-product-1.jpg" alt="" class="shoe">
-          <ul class="list__shoes">
-            <li><img id="show-1" class="item__shoe active__show" src="images/image-product-1-thumbnail.jpg" alt=""></li>
-            <li><img id="show-2" class="item__shoe" src="images/image-product-2-thumbnail.jpg" alt=""></li>
-            <li><img id="show-3" class="item__shoe" src="images/image-product-3-thumbnail.jpg" alt=""></li>
-            <li><img id="show-4" class="item__shoe" src="images/image-product-4-thumbnail.jpg" alt=""></li>
-          </ul>
+        <div class="main__slider">
+          <div class="main__img">
+            <img src="images/image-product-1.jpg" alt="" class="shoe">
+            <ul class="list__shoes">
+              <li><img id="show-1" class="item__shoe active__show" src="images/image-product-1-thumbnail.jpg" alt=""></li>
+              <li><img id="show-2" class="item__shoe" src="images/image-product-2-thumbnail.jpg" alt=""></li>
+              <li><img id="show-3" class="item__shoe" src="images/image-product-3-thumbnail.jpg" alt=""></li>
+              <li><img id="show-4" class="item__shoe" src="images/image-product-4-thumbnail.jpg" alt=""></li>
+            </ul>
+          </div>
+          <div class="slider">
+            <img class='slider-img' src="images/image-product-1.jpg" />
+            <img class='slider-img' src="images/image-product-2.jpg" />
+            <img class='slider-img' src="images/image-product-3.jpg" />
+            <img class='slider-img' src="images/image-product-4.jpg" />
+            <div class="control">
+                <img class="next controlls" src="images/icon-next.svg" alt="">
+            </div>
+            <div class="control">
+              <img class="prev controlls" src="images/icon-previous.svg" alt="">
+            </div>
+          </div>
+        </div> 
+
+        <div class="main__price">
+          <h2 class="price__company">SNEAKER COMPANY</h2>
+          <h1 class="price__title">Fall Limited Edition Sneakers</h1>
+          <p class="price__paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="price">
+            <h2 class="price__num">$125.00</h2>
+            <p class="price__discount">50%</p>
+          </div>
+          <p class="old__price">$250.00</p>
+          <div class="price__cart">
+            <div class="price__add">
+              <img id="item-minus" src="images/icon-minus.svg" alt="" class="add__num">
+              <span class="add__title">0</span>
+              <img id="item-plus" src="images/icon-plus.svg" alt="" class="add__num">
+            </div>
+            <button class="price__button">Add to cart</button>
+          </div>
         </div>
       </div>
     </div>
